@@ -61,8 +61,6 @@ export default function Home() {
             <div className="container mx-auto flex flex-row flex-wrap justify-center items-center w-full min-h-[40vh] h-[70vh] md:h-[40vh] max-h-[100vh] p-3 md:pl-16 md:pt-5 lg:h-[70vh]">
                 <div className="image-wrapper flex md:justify-center md:items-center h-full w-1/2 md:w-1/3">
                     <img src={floraImage} alt="foto Flowa" className="w-full h-full rounded object-contain"/>
-                    <img src={floraImage1} alt="foto flowa2" className=" sm:hidden md:hidden lg:flex lg:w-[13vw] lg:h-[30vh] lg:absolute lg:left-[6vw] lg:top-[12vh] xl:w-[18vh] xl:left-[13vw]" />
-                    <img src={floraImage2} alt="foto flowa2" className=" sm:hidden md:hidden lg:flex lg:w-[13vw] lg:h-[30vh] lg:absolute lg:left-[36vw] lg:top-[35vh] xl:w-[18vh] xl:left-[34vw]" />
                     {/* <div className="container sm:hidden md:hidden lg:flex lg:w-[16vw] lg:relative">
                     </div> */}
                 </div>
