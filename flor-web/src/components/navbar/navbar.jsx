@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 
 export default function Navbar() {
     const [colorNavbar, setColorNavbar] = useState("bg-transparent");
+    const [bottomNavbar1, setBottomNavbar1] = useState("")
+    const [bottomNavbar2, setBottomNavbar2] = useState("")
+    const [bottomNavbar3, setBottomNavbar3] = useState("")
+    const [botNavbar, setBotNavbar] = useState(false)
+    const [id1, setId1] = useState("#about")
+    const [id2, setId2] = useState("#sosmed")
+    const [id3, setId3] = useState("#flosCover")
     const [isOpen, setIsOpen] = useState(false);
 
     const navbar = () => {
@@ -12,10 +19,32 @@ export default function Navbar() {
         }
     };
 
+    const borderNavbar = () => {
+        if (window.scrollY >= 400 && id1 == "#about" && window.scrollY <= 1000) {
+            setBottomNavbar1("border-b-2 border-gothic_1 transition-all");
+            setBottomNavbar2("");
+            setBottomNavbar3("");
+        } else if (window.scrollY >= 1000 && id2 == "#sosmed" && window.scrollY <= 3000) {
+            setBottomNavbar1("");
+            setBottomNavbar2("border-b-2 border-gothic_1 transition-all");
+            setBottomNavbar3("");
+        }else if (window.scrollY >= 3100 && id3 == "#flosCover") {
+            setBottomNavbar1("");
+            setBottomNavbar2("");
+            setBottomNavbar3("border-b-2 border-gothic_1 transition-all");
+        } else {
+            setBottomNavbar1("");
+            setBottomNavbar2("");
+            setBottomNavbar3("");
+        }
+    }
+
     useEffect(() => {
         window.addEventListener("scroll", navbar);
+        window.addEventListener("scroll", borderNavbar);
         return () => {
             window.removeEventListener("scroll", navbar);
+            window.removeEventListener("scroll", borderNavbar);
         };
     }, []);
 
@@ -37,13 +66,13 @@ export default function Navbar() {
                     <a href="#" className="text-xl text-gothic_4 hover:text-gothic_5">
                         Home
                     </a>
-                    <a href="#about" className="text-xl text-gothic_4 hover:text-gothic_5">
+                    <a href={id1} className={`text-xl text-gothic_4 hover:text-gothic_5 ${bottomNavbar1}`}>
                         About Flora
                     </a>
-                    <a href="#sosmed" className="text-xl text-gothic_4 hover:text-gothic_5">
+                    <a href={id2} className={`text-xl text-gothic_4 hover:text-gothic_5 ${bottomNavbar2}`}>
                         Social Media
                     </a>
-                    <a href="#flosCover" className="text-xl text-gothic_4 hover:text-gothic_5">
+                    <a href={id3} className={`text-xl text-gothic_4 hover:text-gothic_5 ${bottomNavbar3}`}>
                         Flora Cover
                     </a>
                 </div>

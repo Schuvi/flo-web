@@ -195,9 +195,9 @@ export default function Home() {
             <br />
             <br />
 
-            <section className="container flex flex-col justify-center items-center sm:mb-10">
+            <section className="flex flex-col justify-center items-center sm:mb-10 w-full">
             <h1 className="text-4xl font-bold text-center sm:mb-5">Flo's Cover</h1>
-                <video src={floraVideo} className="w-[70vw] " controls></video>
+                <video src={floraVideo} className="w-[70vw] self-center mx-auto" controls></video>
             </section>
         </>
     )
