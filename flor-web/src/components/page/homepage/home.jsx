@@ -61,12 +61,10 @@ export default function Home() {
             <div className="container mx-auto flex flex-row flex-wrap justify-center items-center w-full min-h-[40vh] h-[70vh] md:h-[40vh] max-h-[100vh] p-3 md:pl-16 md:pt-5 lg:h-[70vh]">
                 <div className="image-wrapper flex md:justify-center md:items-center h-full w-1/2 md:w-1/3">
                     <img src={floraImage} alt="foto Flowa" className="w-full h-full rounded object-contain"/>
-                    {/* <div className="container sm:hidden md:hidden lg:flex lg:w-[16vw] lg:relative">
-                    </div> */}
                 </div>
 
-                <div className="container text-center md:text-start h-auto w-1/2">
-                    <h1 className="ml-3 md:ml-5 text-3xl md:text-4xl lg:ml-[7vw] text-start sm:text-center font-bold mb-3">The Blooming Flower</h1>
+                <div className="container text-center h-auto w-1/2">
+                    <h1 className="ml-3 md:ml-5 text-3xl md:text-4xl lg:ml-[7vw] text-center sm:text-center  font-bold mb-3">The Blooming Flower</h1>
                     <Typewriter 
                         options={{ 
                             autoStart: true,
@@ -74,7 +72,7 @@ export default function Home() {
                             delay: 50,
                             strings: ['Ada yang mau ikut aku?', 'Ayo ikut ke dunia Flora', 'Simsalabim', 'Akan ku buat...', 'Kamu!', 'Menjadi berbunga-bunga 🌸'],
                             cursor: '|',
-                            wrapperClassName: 'text-xl ml-3 md:ml-5 lg:ml-[7vw]',
+                            wrapperClassName: 'text-xl ml-3 md:ml-5 lg:ml-[7vw] text-center',
                             deleteSpeed: 10  
                         }}
                     />
@@ -153,9 +151,11 @@ export default function Home() {
                         <h1 className="text-lg mb-3">Room Level : 213</h1>
                         <h1 className="text-lg mb-3">Show : TBD~</h1>
 
-                        <button className="border-2 rounded-lg w-full bg-gothic_2 text-gothic_4 hover:bg-gothic_5 hover:text-white">
-                            <a href="https://www.showroom-live.com/room/profile?room_id=318224" target="_blank">Selengkapnya...</a>
-                        </button>
+                            <a href="https://www.showroom-live.com/room/profile?room_id=318224" target="_blank">
+                                <button className="border-2 rounded-lg w-full bg-gothic_2 text-gothic_4 hover:bg-gothic_5 hover:text-white">
+                                    Selengkapnya...
+                                </button>
+                            </a>
                     </div>
                 </div>
             </section>
@@ -171,7 +171,7 @@ export default function Home() {
 
             <section className="flex flex-col justify-center items-center p-5 flex-wrap">
                 <h1 className="mb-5 text-4xl font-bold">Flo's Instagram</h1>
-                <div className="container flex flex-wrap justify-around">
+                <div className="container flex flex-wrap justify-around"> 
                     <InstaFlo/>
                 </div>
             </section>
